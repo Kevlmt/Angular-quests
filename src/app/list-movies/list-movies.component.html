@@ -1,0 +1,7 @@
+<ul *appHandleShowMovie="showMovie">
+  <li>film 1</li>
+  <li ngClass="test2">film 2 special</li>
+  <li>film 3</li>
+  <li>film 4</li>
+</ul>
+<button (click)="handleShowMovie()">{{ showMovie ? "Hide" : "Show" }}</button>
