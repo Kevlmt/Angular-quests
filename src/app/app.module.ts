@@ -8,10 +8,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
-import { SearchMovieComponent } from './search-movie/search-movie.component';
+import { DeveloperComponent } from './developer/developer.component';
+import { SkillComponent } from './skill/skill.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchMovieComponent],
+  declarations: [AppComponent, DeveloperComponent, SkillComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(ROUTES),
