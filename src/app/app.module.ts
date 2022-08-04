@@ -3,24 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
-import { MyFormComponent } from './my-form/my-form.component';
+import { SearchMovieComponent } from './search-movie/search-movie.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MenuComponent,
-    UserProfileComponent,
-    SignUpComponent,
-    MyFormComponent,
+  declarations: [AppComponent, SearchMovieComponent],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(ROUTES),
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  imports: [BrowserModule, RouterModule.forRoot(ROUTES), FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
