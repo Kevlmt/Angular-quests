@@ -5,10 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  onomatopias: string = '';
-
-  onReceiveNewOnomatopeia($event: string) {
-    this.onomatopias = $event;
-  }
-}
+export class AppComponent {}
