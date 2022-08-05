@@ -1,1 +1,5 @@
-<p>list-kitten works!</p>
+<h1>Kittens List</h1>
+<div *ngFor="let kitten of kittens">
+  <p>{{ kitten.name }}</p>
+  <button (click)="addoptKitten(kitten)">Ajouter</button>
+</div>

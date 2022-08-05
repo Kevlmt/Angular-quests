@@ -1,1 +1,8 @@
-<app-create-kitten></app-create-kitten>
+<app-create-kitten
+  (submitKitten)="onReceiveKittens($event)"
+></app-create-kitten>
+<app-list-kitten
+  [kittens]="kittens"
+  (addAdoptKitten)="onAddoptKitten($event)"
+></app-list-kitten>
+<app-user-kitten [kittens]="adoptedKittens"></app-user-kitten>

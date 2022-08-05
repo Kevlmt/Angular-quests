@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import Kitten from './kitten.model';
+import Kitten from '../kitten.model';
 
 @Component({
   selector: 'app-create-kitten',
@@ -15,7 +15,7 @@ export class CreateKittenComponent implements OnInit {
     img: ['', Validators.required],
   });
 
-  @Output() submitKitten: EventEmitter<any> = new EventEmitter();
+  @Output() submitKitten: EventEmitter<Kitten> = new EventEmitter();
 
   constructor(private fb: FormBuilder) {}
 
@@ -23,7 +23,7 @@ export class CreateKittenComponent implements OnInit {
 
   onSubmit() {
     if (this.kittenForm.valid) {
-      this.submitKitten.emit(this.kittenForm);
+      this.submitKitten.emit(this.kittenForm.value);
     }
   }
 }
