@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'Quests angular';
+  onomatopias: string = '';
+
+  onReceiveNewOnomatopeia($event: string) {
+    this.onomatopias = $event;
+  }
 }

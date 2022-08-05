@@ -1,3 +1,7 @@
-<div>
-  <app-developer></app-developer>
-</div>
+<app-create-onomatopia
+  (sendOnomatopiaToParent)="onReceiveNewOnomatopeia($event)"
+></app-create-onomatopia>
+
+<h1>Parent Component</h1>
+
+<p>{{ onomatopias }}</p>
