@@ -9,6 +9,7 @@ import { ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
 import { CocktailListComponentComponent } from './cocktail-list-component/cocktail-list-component.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, CocktailListComponentComponent],
@@ -17,6 +18,7 @@ import { CocktailListComponentComponent } from './cocktail-list-component/cockta
     RouterModule.forRoot(ROUTES),
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

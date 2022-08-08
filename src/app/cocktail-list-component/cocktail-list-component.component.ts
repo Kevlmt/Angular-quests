@@ -9,15 +9,15 @@ import { Cocktail } from '../cocktail';
 })
 export class CocktailListComponentComponent implements OnInit {
   public cocktails: Cocktail[] = [];
-  public getCocktail: CocktailService;
+  public getCocktails: CocktailService;
 
   constructor(getCocktail: CocktailService) {
-    this.getCocktail = getCocktail;
+    this.getCocktails = getCocktail;
   }
 
   ngOnInit(): void {
-    this.getCocktail
-      .getCocktail()
-      .subscribe((data: Array<Cocktail>) => (this.cocktails = data));
+    this.getCocktails
+      .getCocktailsList()
+      .subscribe((data: Cocktail[]) => (this.cocktails = data));
   }
 }
