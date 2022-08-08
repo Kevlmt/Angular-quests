@@ -8,12 +8,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
-import { CreateKittenComponent } from './create-kitten/create-kitten.component';
-import { ListKittenComponent } from './list-kitten/list-kitten.component';
-import { UserKittenComponent } from './user-kitten/user-kitten.component';
+import { CocktailListComponentComponent } from './cocktail-list-component/cocktail-list-component.component';
 
 @NgModule({
-  declarations: [AppComponent, CreateKittenComponent, ListKittenComponent, UserKittenComponent],
+  declarations: [AppComponent, CocktailListComponentComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(ROUTES),
